@@ -4,7 +4,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
   context: path.resolve(__dirname, 'app'),
-  entry: './index.ts',
+   
+  entry: {
+    'app': './src/main.ts'
+  },
   output: {
     path: __dirname + '/dist/',
     filename: 'bundle.js'
