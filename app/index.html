@@ -5,19 +5,20 @@
 
   <script>
 
-  /*
-$(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-       alert("bottom!");
-   }
-});
-  */
+  var observable = Rx.Observable.create((observer) => {
+    
+    setTimeout(() => {
+      observer.next(1);
+    }, 10);
+    
+  });
 
 
-  /*
-  const mouseMove$ = Rx.Observable
-    .fromEvent(document.documentElement, 'mousemove');
-  */
+  observable.subscribe({
+    next: (v) => {
+      console.log(v);
+    }
+  });
 
   const mouseMove$ = Rx.Observable
     .fromEvent(window, 'scroll');
@@ -28,6 +29,9 @@ $(window).scroll(function() {
 </head>
 
   <body>
+    <div>
+      <img src="loader.gif">
+    </div>
   hello. <br>
   hello. <br>
   hello. <br>

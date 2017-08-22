@@ -1,0 +1,27 @@
+{
+  "name": "dop_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wp-dev": "webpack --progress --colors --watch",
+    "demo": "webpack-dev-server --entry ./app/* --output-filename ./dist/bundle/.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niftydevelopment/dop_lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niftydevelopment/dop_lab/issues"
+  },
+  "homepage": "https://github.com/niftydevelopment/dop_lab#readme",
+  "devDependencies": {
+    "ts-loader": "^2.3.3",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
